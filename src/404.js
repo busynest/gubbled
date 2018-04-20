@@ -1,5 +1,5 @@
-import { Element } from '../../@polymer/polymer/polymer-element.js';
-class Gubbled404 extends Element {
+import { PolymerElement } from '../../@polymer/polymer/polymer-element.js';
+class Gubbled404 extends PolymerElement {
   static get template() {
     return `
     <style>

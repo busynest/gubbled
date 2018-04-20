@@ -1,6 +1,6 @@
-import { Element } from '../../@polymer/polymer/polymer-element.js';
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
-class SendFeedback extends Element {
+class SendFeedback extends PolymerElement {
   static get template() {
     return `
     <style include="shared-styles">

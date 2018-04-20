@@ -21,8 +21,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
     <meta http-equiv="If-Modified-Since" content="Mon, 18 Dec 2017 11:10:59 GMT" />
     <meta name="google-site-verification" content="rh-NjqCCrZAZxwcQdF-taYcDvp5CalWAKDDdv2yyH18" />
-    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module" src="/src/application-shell.js"></script>
+    <script type="script" src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
     <!-- JSON -->
     <script type="application/ld+json">
@@ -74,31 +73,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </script>
     -->
-    <meta name="referrer" content="origin">
-    <meta name="author" content="Jack Markiewicz">
-    <link rel="publisher" href="https://plus.google.com/107067405320484499191">
-    <meta name="description" content="Discover new referances for reading and larning the latest news to help you design a Website Application.">
-    <meta name="keywords" content="Website, Application, Learn, Read, Discover, Polymer Project, Reference, Bookmarks, Template, Shadow Dom, Data-Bind">
-    <link rel="canonical" href="https://www.gubbled.com">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <meta name="referrer"     content="origin">
+    <meta name="author"       content="Jack Markiewicz">
+    <meta name="description"  content="Discover new referances for reading and larning the latest news to help you design a Website Application.">
+    <meta name="keywords"     content="Website, Application, Learn, Read, Discover, Polymer Project, Reference, Bookmarks, Template, Shadow Dom, Data-Bind">
+    <link rel="publisher"     href="https://plus.google.com/107067405320484499191">
+    <link rel="canonical"     href="https://www.gubbled.com">
     <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Gubbled">
+    <meta name="mobile-web-app-capable"                 content="yes">
+    <meta name="application-name"                       content="Gubbled">
     <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Gubbled">
+    <meta name="apple-mobile-web-app-capable"           content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style"  content="black-translucent">
+    <meta name="apple-mobile-web-app-title"             content="Gubbled">
     <!-- Homescreen icons -->
-    <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png" />
+    <link rel="apple-touch-icon"                  href="images/manifest/icon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="72x72"    href="images/manifest/icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="96x96"    href="images/manifest/icon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="144x144"  href="images/manifest/icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="192x192"  href="images/manifest/icon-192x192.png" />
     <!-- Tile icon for Windows 8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#546e7a">
-    <meta name="msapplication-tap-highlight" content="no">
-    <link rel="icon" href="images/favicon.ico">
+    <meta name="msapplication-TileImage"          content="images/manifest/icon-144x144.png">
+    <meta name="msapplication-TileColor"          content="#546e7a">
+    <meta name="msapplication-tap-highlight"      content="no">
+    <link rel="icon"                              href="images/favicon.ico">
 
     <!-- Firebase UI 
     <link type="text/css" rel="stylesheet" href="bower_components/firebaseui/dist/firebaseui.css" />
@@ -114,7 +112,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       body {
         margin: 0;
         font-family: 'Roboto', 'Noto', sans-serif;
-        background-color: ; /*#37474f*/
+        background-color:#37474f ; /*#37474f*/
         height: 100vh;
       }
 
@@ -142,8 +140,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
-      </application-shell>
       -->
+      </application-shell>
+      <script type="module" src="./src/application-shell.js"></script>
       <noscript>
         Please enable JavaScript to view this website.
         Gubbled takes the nonsense of web development and organizes documentation for you to read and learn.
@@ -154,8 +153,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <!-- Initialize Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
 
-    <script type="module">
-import '/src/application-shell.js';
+    <script type="text/javascript">
 
 var config = {
   apiKey: "AIzaSyBZIupri6OCDeNXJhrq_ECwTbauN5r8ZMs",

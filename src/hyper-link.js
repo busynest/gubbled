@@ -1,9 +1,9 @@
-import { Element } from '../../@polymer/polymer/polymer-element.js';
-import '../../@polymer/iron-icon/iron-icon.js';
-import '../../@polymer/paper-icon-button/paper-icon-button.js';
-import '../../@polymer/paper-item/paper-item.js';
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
+import '@polymer/iron-icon/iron-icon.js';
+import '@polymer/paper-icon-button/paper-icon-button.js';
+import '@polymer/paper-item/paper-item.js';
 import './shared-styles.js';
-class HyperLink extends Element {
+class HyperLink extends PolymerElement {
   static get template() {
     return `
     <style include="shared-styles">

@@ -1,21 +1,21 @@
-import { Element } from '../../@polymer/polymer/polymer-element.js';
-import '../../@polymer/app-layout/app-header-layout/app-header-layout.js';
-import '../../@polymer/app-layout/app-drawer-layout/app-drawer-layout.js';
-import '../../@polymer/app-layout/helpers/helpers.js';
-import '../../@polymer/app-layout/app-drawer/app-drawer.js';
-import '../../@polymer/app-layout/app-header/app-header.js';
-import '../../@polymer/app-layout/app-toolbar/app-toolbar.js';
-import '../../@polymer/app-route/app-location.js';
-import '../../@polymer/app-route/app-route.js';
-import '../../@polymer/iron-pages/iron-pages.js';
-import '../../@polymer/iron-icon/iron-icon.js';
-import '../../@polymer/iron-selector/iron-selector.js';
-import '../../@polymer/paper-item/paper-icon-item.js';
-import '../../@polymer/paper-input/paper-input.js';
-import '../../@polymer/paper-card/paper-card.js';
-import '../../@polymer/paper-icon-button/paper-icon-button.js';
-import '../../@polymer/paper-button/paper-button.js';
-import '../../@polymer/font-roboto/roboto.js';
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
+import '@polymer/app-layout/app-header-layout/app-header-layout.js';
+import '@polymer/app-layout/app-drawer-layout/app-drawer-layout.js';
+import '@polymer/app-layout/helpers/helpers.js';
+import '@polymer/app-layout/app-drawer/app-drawer.js';
+import '@polymer/app-layout/app-header/app-header.js';
+import '@polymer/app-layout/app-toolbar/app-toolbar.js';
+import '@polymer/app-route/app-location.js';
+import '@polymer/app-route/app-route.js';
+import '@polymer/iron-pages/iron-pages.js';
+import '@polymer/iron-icon/iron-icon.js';
+import '@polymer/iron-selector/iron-selector.js';
+import '@polymer/paper-item/paper-icon-item.js';
+import '@polymer/paper-input/paper-input.js';
+import '@polymer/paper-card/paper-card.js';
+import '@polymer/paper-icon-button/paper-icon-button.js';
+import '@polymer/paper-button/paper-button.js';
+import '@polymer/font-roboto/roboto.js';
 import './shared-styles.js';
 import './developer-tools.js';
 import './404.js';
@@ -25,7 +25,7 @@ import './polymer-project.js';
 import './send-feedback.js';
 import './google-developers.js';
 import './log-in.js';
-import { importHref } from '../../@polymer/polymer/lib/utils/import-href.js';
+import { importHref } from '@polymer/polymer/lib/utils/import-href.js';
 
 /* POLYMER */
 /*  Header LAYOUT */
@@ -52,7 +52,7 @@ import { importHref } from '../../@polymer/polymer/lib/utils/import-href.js';
 <link rel="import" href="../bower_components/polymerfire/firebase-query.html">
 */
 /* Custom Elements */
-class ApplicationShell extends Element {
+export class ApplicationShell extends PolymerElement {
   static get template() {
     return `
     <style include="shared-styles">
