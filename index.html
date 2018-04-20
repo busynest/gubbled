@@ -1,0 +1,359 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Website Development</title>
+    <meta charset="utf-8">
+    <base href="/">
+    <meta name="theme-color" content="#546e7a">
+    <link rel="manifest" href="manifest.json">
+    <link rel="alternate" href="gubbled.com" hreflang="en-US" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <meta http-equiv="If-Modified-Since" content="Mon, 18 Dec 2017 11:10:59 GMT" />
+    <meta name="google-site-verification" content="rh-NjqCCrZAZxwcQdF-taYcDvp5CalWAKDDdv2yyH18" />
+    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <link rel="import" href="src/application-shell.html" async>
+
+    <!-- JSON -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebApplication",
+        "name": "Gubbled",
+        "applicationCategory":"Reference",
+        "applicationSubCategory":"Website",
+        "description":"Discover referances for reading and larning the latest news to help you design a Website Application with Google's Polymer Project.",
+
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "1"
+          },
+
+        "offers": {
+          "@type": "Offer",
+            "availability": "http://schema.org/InStock",
+            "price": "0.00",
+            "priceCurrency": "CAD"
+          },
+
+        "operatingSystem":"HTML5",
+        "headline": "Learn about Progressive Website Applications",
+        "url": "https://www.gubbled.com",
+        "datePublished": "2017-12-18T11:20:41Z"
+      }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73943527-10"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-73943527-10');
+    </script>
+
+    <script>
+      // Register the base URL
+      const baseUrl = document.querySelector('base').href;
+      // Load and register pre-caching Service Worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register(baseUrl + 'service-worker.js');
+        });
+      }
+    </script>
+    -->
+    <meta name="referrer" content="origin">
+    <meta name="author" content="Jack Markiewicz">
+    <link rel="publisher" href="https://plus.google.com/107067405320484499191">
+    <meta name="description" content="Discover new referances for reading and larning the latest news to help you design a Website Application.">
+    <meta name="keywords" content="Website, Application, Learn, Read, Discover, Polymer Project, Reference, Bookmarks, Template, Shadow Dom, Data-Bind">
+    <link rel="canonical" href="https://www.gubbled.com">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Gubbled">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Gubbled">
+    <!-- Homescreen icons -->
+    <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png" />
+    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#546e7a">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Firebase UI 
+    <link type="text/css" rel="stylesheet" href="bower_components/firebaseui/dist/firebaseui.css" />
+
+    loads the AMP JS library 
+    <script async src="https://cdn.ampproject.org/v0.js"></script> -->
+    <!-- Points to the regular HTML version of the AMP HTML document or to itself if no such HTML version exists 
+    <link rel="canonical" href="https://www.gubbled.com/polymer-project.html"> -->
+
+
+    <!-- Global Styles -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', 'Noto', sans-serif;
+        background-color: ; /*#37474f*/
+        height: 100vh;
+      }
+
+
+
+    /* styling for render while resources are loading 
+    application-shell[unresolved] {
+
+    }
+    */
+    </style>
+
+
+  </head>
+  <body role="application">
+
+    <application-shell>
+        <!-- polymer display 
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2634777664576238"
+             data-ad-slot="6977609267"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </application-shell>
+      -->
+      <noscript>
+        Please enable JavaScript to view this website.
+        Gubbled takes the nonsense of web development and organizes documentation for you to read and learn.
+        This website utilizes the power of Custom Elements with Google's Polymer Project.
+        Learn how to create reusable Web-apps that register within the Document Object Model (DOM), are able to communicate with data-binding, and are Event driven!
+      </noscript>
+
+    <!-- Initialize Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+
+    <script>
+
+        var config = {
+          apiKey: "AIzaSyBZIupri6OCDeNXJhrq_ECwTbauN5r8ZMs",
+          authDomain: "gubbled-19e35.firebaseapp.com",
+          databaseURL: "https://gubbled-19e35.firebaseio.com",
+          projectId: "gubbled-19e35",
+          storageBucket: "gubbled-19e35.appspot.com",
+          messagingSenderId: "891532970940"
+          };
+        firebase.initializeApp(config);
+
+    </script>
+
+
+
+
+  </body>
+</html>
+
+<!--
+
+      <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-messaging.js"></script>
+      padding: 0 16px;
+      overflow: visible;
+      text-align: center;
+
+              "image": [
+          "logo.jpg"
+        ]
+
+      const firebase = require("firebase");
+      // Required for side-effects
+      require("firebase/firestore");
+  
+        font-family: 'Roboto', 'Noto', sans-serif;
+
+              @font-face {
+        font-family: 'Roboto';
+        src: url('app/Roboto-Regular.ttf');
+      }
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+    <script src="bower_components/firebaseui/dist/firebaseui.js"></script>
+
+
+
+      /*
+      var config = {
+        apiKey: "AIzaSyBZIupri6OCDeNXJhrq_ECwTbauN5r8ZMs",
+        authDomain: "gubbled-19e35.firebaseapp.com",
+        databaseURL: "https://gubbled-19e35.firebaseio.com",
+        projectId: "gubbled-19e35",
+        storageBucket: "gubbled-19e35.appspot.com",
+        messagingSenderId: "891532970940"
+      };
+      firebase.initializeApp(config);
+
+      const auth = firebase.auth();
+      // Log-in
+      auth.signInWithEmailAndPassword(email, pass);
+      // Sign-up
+      auth.createUserWithEmailAndPassword(email, pass);
+
+      auth.onAuthStateChanged(firebaseUser => {});
+
+
+
+
+
+
+
+
+      firebase.auth().signInWithRedirect(provider);
+
+      firebase.auth().getRedirectResult().then(function(result) {
+        if (result.credential) {
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          var token = result.credential.accessToken;
+          // ...
+        }
+        // The signed-in user info.
+        var user = result.user;
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+
+
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+          var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+         // ...
+        } else {
+          // User is signed out.
+          // ...
+        }
+      });
+/**
+
+firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+
+
+
+
+
+
+
+
+
+
+
+    var provider = new firebase.auth.GoogleAuthProvider();
+
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
+
+
+  
+     /* const firebase = require("firebase");
+      
+      var firebaseui = require('firebaseui');
+      // Required for side-effects
+      var db = firebase.firestore();
+      var provider = new firebase.auth.GoogleAuthProvider();
+
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+
+
+  firebase.auth().getRedirectResult().then(function(result) {
+  if (result.credential) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // ...
+  }
+  // The signed-in user info.
+  var user = result.user;
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
+});
+*/
+
+-->

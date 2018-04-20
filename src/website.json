@@ -1,0 +1,64 @@
+[
+
+  {
+    "title": "Progressive Web Apps",
+    "url": "https://developers.google.com/web/progressive-web-apps",
+    "paragraph": "A new way to deliver amazing user experiences on the web.",
+    "publisher": "Google Developers"
+  },
+
+  {
+    "title": "Custom elements",
+    "url": "https://www.polymer-project.org/2.0/docs/devguide/custom-elements",
+    "paragraph": "Custom elements provide a component model for the web. These features let you build an element with its own public API that reacts to state changes.",
+    "publisher": "Google Developers"
+  },
+
+  {
+    "title": "Shadow DOM",
+    "url": "https://www.polymer-project.org/2.0/docs/devguide/shadow-dom",
+    "paragraph": "Shadow DOM lets you place the children in a scoped subtree, so document-level CSS can't restyle the button by accident, for example. This subtree is called a shadow tree.",
+    "publisher": "Google Developers"
+  },
+
+  {
+    "title": "Events",
+    "url": "https://www.polymer-project.org/2.0/docs/devguide/events",
+    "paragraph": "Elements use events to communicate state changes up the DOM tree to parent elements.",
+    "publisher": "Google Developers"
+  },
+
+  {
+    "title": "Data system",
+    "url": "https://www.polymer-project.org/2.0/docs/devguide/data-system",
+    "paragraph": "Each Polymer element manages its own data model and local DOM elements. The model for an element is the element's properties.",
+    "publisher": "Google Developers"
+  },
+
+  {
+    "title": "Define an element",
+    "url": "https://www.polymer-project.org/2.0/docs/devguide/custom-elements",
+    "paragraph": "To define a custom element, create a class that extends Polymer.Element and pass the class to the customElements.define method.",
+    "publisher": "Google Developers"
+  },
+
+  {
+    "title": "Polymer App Toolbox",
+    "paragraph": "Polymer App Toolbox is a collection of components, tools and templates for building Progressive Web Apps with Polymer. You can use any one of these components separately, or use them together to build a full-featured Progressive web app.",
+    "publisher": "Google Developers"
+  },
+
+  {
+    "title": "PRPL Pattern",
+    "paragraph": "Currently, the Polymer CLI and reference server support a single-page app (SPA)",
+    "publisher": "Google Developers"
+  },
+
+  {
+    "title": "Build for production",
+    "url": "https://www.polymer-project.org/2.0/toolbox/build-for-production",
+    "paragraph": "The build toolset can reduce the download size of your app and its elements by minifying your code.",
+    "publisher": "Google Developers"
+  }
+
+]

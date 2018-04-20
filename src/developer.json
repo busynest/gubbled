@@ -1,0 +1,31 @@
+[
+	{
+		"title": "HTML Event Attributes",
+		"url": "https://www.w3schools.com/tags/ref_eventattributes.asp",
+		"paragraph": "HTML 4 added the ability to let events trigger actions in a browser, like starting a JavaScript when a user clicks on an element."
+	},
+
+	{
+		"title": "Fetch as Google",
+		"url": "https://www.google.com/webmasters/tools/googlebot-fetch",
+		"paragraph": "See how Google renders pages from your website."
+	},
+
+	{
+		"title":"codewars",
+		"url":"https://www.codewars.com",
+		"paragraph":"Achieve mastery through challenge. Improve your skills by training with others on real code challenges."
+	},
+
+	{
+		"title":"HTML 5 Tester",
+		"url":"https://html5test.com",
+		"paragraph":"how well does your browser support html5?"
+	},
+
+	{
+		"title":"What Web Can Do Today",
+		"url":"https://whatwebcando.today/",
+		"paragraph":"Can I rely on the Web Platform features to build my app? An overview of the device integration HTML5 APIs"
+	}
+]

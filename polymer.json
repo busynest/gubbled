@@ -1,0 +1,43 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/application-shell.html",
+  "fragments": [
+    "src/404.html",
+    "src/send-feedback.html",
+    "src/polymer-project.html",
+    "src/developer-tools.html",
+    "src/google-developers.html",
+    "src/mozilla-developers.html",
+    "src/website-development.html",
+    "src/hyper-link.html"
+  ],
+  "sources": [
+    "src/**/*",
+    "images/**/*",
+    "bower.json"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/*.js",
+    "src/polymers.json",
+    "src/mozilla.json",
+    "src/developer.json",
+    "src/website.json",
+    "package.json",
+    "sitemap.xml"
+  ],
+  "lint": {
+    "rules": ["polymer-2"]
+  },
+  "builds": [
+    {
+      "preset": "es5-bundled"
+    },
+    {
+      "preset": "es6-bundled"
+    },
+    {
+      "preset": "es6-unbundled"
+    }
+  ]
+}
