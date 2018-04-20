@@ -1,9 +1,8 @@
-
-<link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="shared-styles.html">
-
-<dom-module id="send-feedback">
-  <template>
+import { Element } from '../../@polymer/polymer/polymer-element.js';
+import './shared-styles.js';
+class SendFeedback extends Element {
+  static get template() {
+    return `
     <style include="shared-styles">
       :host {
 
@@ -42,18 +41,13 @@
       <div id="controls">Controls</div>
 
     </div>
-
-  </template>
-
-  <script>
-    class SendFeedback extends Polymer.Element {
-      static get is() { return 'send-feedback'; }
-
-      constructor() {
-        super();
-      }
-
+`;
   }
-    window.customElements.define(SendFeedback.is, SendFeedback);
-  </script>
-</dom-module>
+
+  static get is() { return 'send-feedback'; }
+
+  constructor() {
+    super();
+  }
+}
+window.customElements.define(SendFeedback.is, SendFeedback);

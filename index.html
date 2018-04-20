@@ -21,8 +21,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
     <meta http-equiv="If-Modified-Since" content="Mon, 18 Dec 2017 11:10:59 GMT" />
     <meta name="google-site-verification" content="rh-NjqCCrZAZxwcQdF-taYcDvp5CalWAKDDdv2yyH18" />
-    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
-    <link rel="import" href="src/application-shell.html" async>
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="/src/application-shell.js"></script>
 
     <!-- JSON -->
     <script type="application/ld+json">
@@ -154,19 +154,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <!-- Initialize Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
 
-    <script>
+    <script type="module">
+import '/src/application-shell.js';
 
-        var config = {
-          apiKey: "AIzaSyBZIupri6OCDeNXJhrq_ECwTbauN5r8ZMs",
-          authDomain: "gubbled-19e35.firebaseapp.com",
-          databaseURL: "https://gubbled-19e35.firebaseio.com",
-          projectId: "gubbled-19e35",
-          storageBucket: "gubbled-19e35.appspot.com",
-          messagingSenderId: "891532970940"
-          };
-        firebase.initializeApp(config);
-
-    </script>
+var config = {
+  apiKey: "AIzaSyBZIupri6OCDeNXJhrq_ECwTbauN5r8ZMs",
+  authDomain: "gubbled-19e35.firebaseapp.com",
+  databaseURL: "https://gubbled-19e35.firebaseio.com",
+  projectId: "gubbled-19e35",
+  storageBucket: "gubbled-19e35.appspot.com",
+  messagingSenderId: "891532970940"
+  };
+firebase.initializeApp(config);
+</script>
 
 
 

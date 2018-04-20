@@ -1,11 +1,11 @@
-<link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
-<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../bower_components/paper-item/paper-item.html">
-<link rel="import" href="shared-styles.html">
-
-<dom-module id="hyper-link">
-  <template>
+import { Element } from '../../@polymer/polymer/polymer-element.js';
+import '../../@polymer/iron-icon/iron-icon.js';
+import '../../@polymer/paper-icon-button/paper-icon-button.js';
+import '../../@polymer/paper-item/paper-item.js';
+import './shared-styles.js';
+class HyperLink extends Element {
+  static get template() {
+    return `
     <style include="shared-styles">
       :host {
         display: block;
@@ -51,11 +51,8 @@
         <paper-item class="post">
             <div class="description">
               <!-- Title -->
-              <a
-                href="[[url]]"
-                target="_blank">
-                <div
-                  class="title">
+              <a href="[[url]]" target="_blank">
+                <div class="title">
                   <div></div>
                   <!--
                   <img
@@ -74,39 +71,33 @@
                     </ul>
                   </div>
                   
-                  <iron-icon
-                    class="link"
-                    icon="link">
+                  <iron-icon class="link" icon="link">
                   </iron-icon>
                 </div>
               </a>
               <p class="paragraph">[[paragraph]]</p>
             </div>
           </paper-item>
+`;
+  }
 
-            </template>
+  static get is() { return 'hyper-link'; }
 
-  <script>
-    class HyperLink extends Polymer.Element {
-      static get is() { return 'hyper-link'; }
+  constructor() {
+    super();
+  }
 
-      constructor() {
-        super();
-      }
-
-      static get properties() {
-          return {
-            url: {type: String},
-            title:{type: String},
-            publisher:{type: String},
-            paragraph:{type: String},
-            publisher:{type: String}
-          };
-      }
-    }
+  static get properties() {
+      return {
+        url: {type: String},
+        title:{type: String},
+        publisher:{type: String},
+        paragraph:{type: String},
+        publisher:{type: String}
+      };
+  }
+}
 
 
 
-    window.customElements.define(HyperLink.is, HyperLink);
-  </script>
-</dom-module>
+window.customElements.define(HyperLink.is, HyperLink);

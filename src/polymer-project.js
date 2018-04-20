@@ -1,15 +1,15 @@
+import { Element } from '../../@polymer/polymer/polymer-element.js';
+import '../../@polymer/iron-ajax/iron-ajax.js';
+import '../../@polymer/iron-list/iron-list.js';
+import '../../@polymer/iron-icon/iron-icon.js';
+import '../../@polymer/paper-icon-button/paper-icon-button.js';
+import '../../@polymer/paper-item/paper-item.js';
+import './hyper-link.js';
+import './shared-styles.js';
 
-<link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
-<link rel="import" href="../bower_components/iron-list/iron-list.html">
-<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
-<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../bower_components/paper-item/paper-item.html">
-<link rel="import" href="hyper-link.html">
-<link rel="import" href="shared-styles.html">
-
-<dom-module id="polymer-project">
-  <template>
+class PolymerProject extends Element {
+  static get template() {
+    return `
     <style include="shared-styles">
       :host {
         display: block;
@@ -30,20 +30,10 @@
 
       <h1>Polymer Project</h1>
         
-        <iron-ajax
-          url="src/polymers.json"
-          last-response="{{polymur}}"
-          auto></iron-ajax>
-        <iron-list
-          items="[[polymur]]"
-          as="polymur"
-          scroll-offset="200">
+        <iron-ajax url="src/polymers.json" last-response="{{polymur}}" auto=""></iron-ajax>
+        <iron-list items="[[polymur]]" as="polymur" scroll-offset="200">
         <template>
-        <hyper-link
-          url="[[polymur.url]]"
-          publisher="[[polymur.publisher]]"
-          title="[[polymur.title]]"
-          paragraph="[[polymur.paragraph]]"></hyper-link>
+        <hyper-link url="[[polymur.url]]" publisher="[[polymur.publisher]]" title="[[polymur.title]]" paragraph="[[polymur.paragraph]]"></hyper-link>
         </template>
         </iron-list>
 
@@ -96,7 +86,7 @@
       <p>Create ES6 class and associate it with the custom element name, extend the Polymer.Element class. The element's class defines its behavior and public API.</p>
       <code>
           class MyPolymerElement extends Polymer.Element { ... }
-      <br /> 
+      <br> 
           customElements.define('my-polymer-element', MyPolymerElement);
       </code>
       
@@ -225,7 +215,7 @@
 
 
 <p><span style="font-size: 18pt; ">Website</span>
-  <ul>
+  </p><ul>
     <li>Polymer
       <ul>
         <li>Custom Elements
@@ -580,29 +570,19 @@
 
 
 
-    <article
-      class="firstList">
+    <article class="firstList">
 
-    <iron-ajax
-      url="src/polymers.json"
-      last-response="{{polymur}}"
-      auto></iron-ajax>
+    <iron-ajax url="src/polymers.json" last-response="{{polymur}}" auto=""></iron-ajax>
 
-    <iron-list
-      items="[[polymur]]"
-      as="polymur"
-      scroll-offset="200">
+    <iron-list items="[[polymur]]" as="polymur" scroll-offset="200">
 
     <template>
 
         <paper-item class="post">
             <div class="description">
               <!-- Title -->
-              <a
-                href="[[polymur.url]]"
-                target="_blank">
-                <div
-                  class="title">
+              <a href="[[polymur.url]]" target="_blank">
+                <div class="title">
                   <div></div>
                   <!--
                   <img
@@ -621,9 +601,7 @@
                     </ul>
                   </div>
                   
-                  <iron-icon
-                    class="link"
-                    icon="link">
+                  <iron-icon class="link" icon="link">
                   </iron-icon>
                 </div>
               </a>
@@ -635,33 +613,28 @@
 
   </iron-list>
 </article>
+`;
+  }
 
-  </template>
+  static get is() { return 'polymer-project'; }
 
-  <script>
+  constructor() {
+    super();
+  }
 
-    class PolymerProject extends Polymer.Element {
-      static get is() { return 'polymer-project'; }
-
-      constructor() {
-        super();
-      }
-
-      static get properties() {
-          return {
+  static get properties() {
+      return {
 
 
-          };
-      }
-    }
+      };
+  }
+}
 
 
 
-    window.customElements.define(PolymerProject.is, PolymerProject);
-  </script>
-</dom-module>
+window.customElements.define(PolymerProject.is, PolymerProject);
 
-<!--
+/*
 
             classed: {
               string: ''
@@ -814,4 +787,5 @@
     </div>
     </paper-card>
 
--->
+*/
+;

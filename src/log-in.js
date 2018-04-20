@@ -1,20 +1,12 @@
-<!--
-@license
-Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/paper-button/paper-button.html">
-<link rel="import" href="../bower_components/paper-card/paper-card.html">
-<link rel="import" href="../bower_components/paper-input/paper-input.html">
-<link rel="import" href="shared-styles.html">
+import { Element } from '../../@polymer/polymer/polymer-element.js';
+import '../../@polymer/paper-button/paper-button.js';
+import '../../@polymer/paper-card/paper-card.js';
+import '../../@polymer/paper-input/paper-input.js';
+import './shared-styles.js';
+const $_documentContainer = document.createElement('div');
+$_documentContainer.setAttribute('style', 'display: none;');
 
-
-<dom-module id="log-in">
+$_documentContainer.innerHTML = `<dom-module id="log-in">
   <template id="app">
     <style media="screen" include="shared-styles">
       :host {
@@ -32,40 +24,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <paper-input id="txtPassword" label="Password"></paper-input>
         <paper-button id="logIn" class="">Log-in with Google</paper-button>
         <paper-button id="signUp" class="">Sign-in with Google</paper-button>
-        <paper-button hidden id="logOut" class="">Sign-in with Google</paper-button>
+        <paper-button hidden="" id="logOut" class="">Sign-in with Google</paper-button>
       </paper-card>
 
     </template>
 
-  <script>
-    class LogIn extends Polymer.Element {
-      static get is() { return 'log-in'; }
-
-      constructor() {
-        super();
-
-        const txtEmail = document.getElementById('textEmail');
-        const txtPassword = document.getElementById('txtPassword');
-        const logIn = document.getElementById('logIn');
-        const signUp = document.getElementById('signUp');
-        const logOut = document.getElementById('logOut');
-      }
-
-      logIn() {
-        //Get Email and Password
-        const email = txtEmail.value();
-        const pass = txtPassword.value();
-        const auth = firebase.auth();
-        // Sign-in
-        const promise = auth.signInWithEmailAndPassword(email, pass);
-      }
-
-	}
-
-
-      	window.customElements.define(LogIn.is, LogIn);
-
-  </script>
+  
 <!--
   <script>
 
@@ -89,11 +53,73 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   }());
 
-  </script>
+  &lt;/script>
 -->
-</dom-module>
+</dom-module>`;
 
-<!--
+document.head.appendChild($_documentContainer);
+/**
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+*/
+class LogIn extends Element {
+  static get is() { return 'log-in'; }
+
+  constructor() {
+    super();
+
+    const txtEmail = document.getElementById('textEmail');
+    const txtPassword = document.getElementById('txtPassword');
+    const logIn = document.getElementById('logIn');
+    const signUp = document.getElementById('signUp');
+    const logOut = document.getElementById('logOut');
+  }
+
+  logIn() {
+    //Get Email and Password
+    const email = txtEmail.value();
+    const pass = txtPassword.value();
+    const auth = firebase.auth();
+    // Sign-in
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+  }
+
+}
+
+
+window.customElements.define(LogIn.is, LogIn);
+
+/*
+  <script>
+
+  (function() { 
+
+  var config = {
+        apiKey: "AIzaSyBZIupri6OCDeNXJhrq_ECwTbauN5r8ZMs",
+        authDomain: "gubbled-19e35.firebaseapp.com",
+        databaseURL: "https://gubbled-19e35.firebaseio.com",
+        projectId: "gubbled-19e35",
+        storageBucket: "gubbled-19e35.appspot.com",
+        messagingSenderId: "891532970940"
+      };
+  firebase.initializeApp(config);
+
+  const txtEmail = document.getElementById('textEmail');
+  const txtPassword = document.getElementById('txtPassword');
+  const logIn = document.getElementById('logIn');
+  const signUp = document.getElementById('signUp');
+  const logOut = document.getElementById('logOut');
+
+  }());
+
+  </script>
+*/
+/**
 
 
 
@@ -318,4 +344,5 @@ main, #messages-card {
 <link rel="import" href="../bower_components/polymerfire/firebase-query.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/paper-input/paper-input.html">
-  -->
+  */
+;

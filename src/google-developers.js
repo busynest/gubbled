@@ -1,13 +1,13 @@
-<link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
-<link rel="import" href="../bower_components/iron-list/iron-list.html">
-<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
-<link rel="import" href="../bower_components/paper-item/paper-item.html">
-<link rel="import" href="shared-styles.html">
-
-<dom-module id="google-developers">
-  <template>
-    <style  include="shared-styles">
+import { Element } from '../../@polymer/polymer/polymer-element.js';
+import '../../@polymer/iron-ajax/iron-ajax.js';
+import '../../@polymer/iron-list/iron-list.js';
+import '../../@polymer/iron-icons/iron-icons.js';
+import '../../@polymer/paper-item/paper-item.js';
+import './shared-styles.js';
+class GoogleDevelopers extends Element {
+  static get template() {
+    return `
+    <style include="shared-styles">
       :host {
         display: block;
         }
@@ -24,30 +24,17 @@
 
     <article class="secondList">
 
-    <iron-ajax
-      url="src/google.json"
-      last-response="{{google}}"
-      auto></iron-ajax>
+    <iron-ajax url="src/google.json" last-response="{{google}}" auto=""></iron-ajax>
 
-    <iron-list
-      items="[[google]]"
-      as="google"
-      scroll-offset="200">
+    <iron-list items="[[google]]" as="google" scroll-offset="200">
 
       <template>
 
           <paper-item class="post">
             <div class="description">
-              <a
-                href="[[google.url]]"
-                target="_blank">
+              <a href="[[google.url]]" target="_blank">
                 <div class="title">
-                  <img
-                    class="guestLogo"
-                    src="./images/google.png"
-                    alt="Google Developers"
-                    width="48"
-                    height="48">
+                  <img class="guestLogo" src="./images/google.png" alt="Google Developers" width="48" height="48">
                     <div class="stamp">
                       <ul>
                         <!-- Title -->
@@ -84,27 +71,22 @@
       </template>
     </iron-list>
     </article>
+`;
+  }
+
+  static get is() { return 'google-developers'; }
+
+  constructor() {
+    super();
+  }
+
+  static get properties() {
+      return {
 
 
-    </template>
-
-  <script>
-    class GoogleDevelopers extends Polymer.Element {
-      static get is() { return 'google-developers'; }
-
-      constructor() {
-        super();
-      }
-      
-      static get properties() {
-          return {
+      };
+  }
+}
 
 
-          };
-      }
-    }
-
-
-    window.customElements.define(GoogleDevelopers.is, GoogleDevelopers);
-  </script>
-</dom-module>
+window.customElements.define(GoogleDevelopers.is, GoogleDevelopers);

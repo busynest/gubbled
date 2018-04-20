@@ -1,14 +1,13 @@
-
-<link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
-<link rel="import" href="../bower_components/iron-list/iron-list.html">
-<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
-<link rel="import" href="../bower_components/paper-item/paper-item.html">
-<link rel="import" href="shared-styles.html">
-
-<dom-module id="developer-tools">
-  <template>
-    <style  include="shared-styles">
+import { Element } from '../../@polymer/polymer/polymer-element.js';
+import '../../@polymer/iron-ajax/iron-ajax.js';
+import '../../@polymer/iron-list/iron-list.js';
+import '../../@polymer/iron-icons/iron-icons.js';
+import '../../@polymer/paper-item/paper-item.js';
+import './shared-styles.js';
+class DeveloperTools extends Element {
+  static get template() {
+    return `
+    <style include="shared-styles">
       :host {
         display: block;
         }
@@ -23,33 +22,19 @@
 
     <article class="fourthList">
 
-    <iron-ajax
-      url="src/developer.json"
-      last-response="{{dev}}"
-      auto></iron-ajax>
+    <iron-ajax url="src/developer.json" last-response="{{dev}}" auto=""></iron-ajax>
 
-    <iron-list
-      items="[[dev]]"
-      as="dev"
-      scroll-offset="200">
+    <iron-list items="[[dev]]" as="dev" scroll-offset="200">
 
       <template>
  
         <paper-item class="post">
             <div class="description">
               <!-- Title -->
-              <a
-                href="[[dev.url]]"
-                target="_blank">
-                <div
-                  class="title">
+              <a href="[[dev.url]]" target="_blank">
+                <div class="title">
 
-                  <img
-                    class="guestLogo"
-                    src="./images/developer.png"
-                    alt="Mozilla Developers"
-                    width="48"
-                    height="48">
+                  <img class="guestLogo" src="./images/developer.png" alt="Mozilla Developers" width="48" height="48">
 
                   <div class="stamp">
                     <ul>
@@ -60,9 +45,7 @@
                     </ul>
                   </div>
                   
-                  <iron-icon
-                    class="link"
-                    icon="link">
+                  <iron-icon class="link" icon="link">
                   </iron-icon>
                 </div>
               </a>
@@ -91,32 +74,28 @@
       </template>
     </iron-list>
   </article>
+`;
+  }
 
-    </template>
+  static get is() { return 'developer-tools'; }
 
-  <script>
-    class DeveloperTools extends Polymer.Element {
-      static get is() { return 'developer-tools'; }
-      
-      constructor() {
-        super();
-      }
+  constructor() {
+    super();
+  }
 
-      static get properties() {
-          return {
+  static get properties() {
+      return {
 
 
-          };
-      }
-    }
+      };
+  }
+}
 
 
 
-    window.customElements.define(DeveloperTools.is, DeveloperTools);
-  </script>
-</dom-module>
+window.customElements.define(DeveloperTools.is, DeveloperTools);
 
-<!--
+/*
 
   connectedCallback() {
     super.connectedCallback();
@@ -128,4 +107,5 @@
   }
 
 
--->
+*/
+;
