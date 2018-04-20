@@ -4,7 +4,7 @@ import '@polymer/iron-list/iron-list.js';
 import '@polymer/iron-icons/iron-icons.js';
 import '@polymer/paper-item/paper-item.js';
 import './shared-styles.js';
-class DeveloperTools extends PolymerElement {
+export class DeveloperTools extends PolymerElement {
   static get template() {
     return `
     <style include="shared-styles">

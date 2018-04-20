@@ -1,56 +1,41 @@
+
 import { PolymerElement } from '@polymer/polymer/polymer-element.js';
+
 import '@polymer/app-layout/app-header-layout/app-header-layout.js';
 import '@polymer/app-layout/app-drawer-layout/app-drawer-layout.js';
 import '@polymer/app-layout/helpers/helpers.js';
 import '@polymer/app-layout/app-drawer/app-drawer.js';
 import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
+
 import '@polymer/app-route/app-location.js';
 import '@polymer/app-route/app-route.js';
+
 import '@polymer/iron-pages/iron-pages.js';
 import '@polymer/iron-icon/iron-icon.js';
 import '@polymer/iron-selector/iron-selector.js';
+
 import '@polymer/paper-item/paper-icon-item.js';
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/paper-card/paper-card.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/font-roboto/roboto.js';
-import './shared-styles.js';
+
 import './developer-tools.js';
 import './404.js';
 import './website-development.js';
-import './mozilla-developers.js';
-import './polymer-project.js';
 import './send-feedback.js';
-import './google-developers.js';
 import './log-in.js';
+
 import { importHref } from '@polymer/polymer/lib/utils/import-href.js';
 
-/* POLYMER */
-/*  Header LAYOUT */
-/*  Drawer LAYOUT */
-/*  Layout Helpers */
-/*  Drawer */
-/* HEADER */
-/* TOOLBAR */
-/* APP LOCATION */
-/* APP ROUTE */
-/* PAGES */
-/* Iroon Icons */
-/* Iron Selector */
-/* Paper Item */
-/* Paper Input */
-/* Paper Card */
-/* Icon Button */
-/* Paper Button */
-/* Font */
-/*<link rel="import" href="../bower_components/iron-resizable-behavior/iron-resizable-behavior.html">*/
 /*
 <link rel="import" href="../bower_components/polymerfire/firebase-app.html">
 <link rel="import" href="../bower_components/polymerfire/firebase-auth.html">
 <link rel="import" href="../bower_components/polymerfire/firebase-query.html">
 */
+
 /* Custom Elements */
 export class ApplicationShell extends PolymerElement {
   static get template() {
@@ -139,31 +124,9 @@ export class ApplicationShell extends PolymerElement {
         <!-- TOPICS & FEATURES -->
         <iron-selector class="magicTabsOne" role="navigation" selected="[[page]]" attr-for-selected="name">
 
-          <a name="polymer-project" href="polymer-project">
-            <paper-icon-item>
-              <iron-icon icon="apps" slot="item-icon"></iron-icon>Polymer Application
-            </paper-icon-item>
-          </a>
-
-          <a name="website-development" href="website-development">
-            <paper-icon-item>
-              <iron-icon icon="apps" slot="item-icon"></iron-icon>Website Applications
-            </paper-icon-item>
-          </a>
-
           <a name="developer-tools" href="developer-tools">
             <paper-icon-item>
               <iron-icon icon="apps" slot="item-icon"></iron-icon>Developer Tools
-            </paper-icon-item>
-          </a>
-          <a name="google-developers" href="google-developers">
-            <paper-icon-item>
-              <iron-icon icon="apps" slot="item-icon"></iron-icon>Google Developers
-            </paper-icon-item>
-          </a>
-          <a name="mozilla-developers" href="mozilla-developers">
-            <paper-icon-item>
-              <iron-icon icon="apps" slot="item-icon"></iron-icon>Mozilla Developers
             </paper-icon-item>
           </a>
 
@@ -203,16 +166,8 @@ export class ApplicationShell extends PolymerElement {
         <!-- IRON PAGES -->
         <iron-pages selected="[[page]]" attr-for-selected="name" fallback-selection="gubbled-404" role="main">
 
-          <website-development itemscope="" itemtype="http://schema.org/Article" name="website-development"></website-development>
-
-          <!-- POLYMER -->
-          <polymer-project itemscope="" itemtype="http://schema.org/Article" name="polymer-project"></polymer-project>
-
           <!-- FEEDBACK -->
           <google-developers itemscope="" itemtype="http://schema.org/Article" name="google-developers"></google-developers>
-
-          <!-- Mozilla -->
-          <mozilla-developers itemscope="" itemtype="http://schema.org/Article" name="mozilla-developers"></mozilla-developers>
 
           <!-- Developer Tools -->
           <developer-tools itemscope="" itemtype="http://schema.org/Article" name="developer-tools"></developer-tools>
@@ -230,7 +185,7 @@ export class ApplicationShell extends PolymerElement {
       </main>
       </app-header-layout>
     </app-drawer-layout>
-`;
+`
   }
 
   static get is() { return 'application-shell'; }
@@ -266,8 +221,6 @@ export class ApplicationShell extends PolymerElement {
 
   constructor() {
     super();
-
-    // Get root pattern for app-route, for more info about `rootPath` see:
     // https://www.polymer-project.org/2.0/docs/upgrade#urls-in-templates
     this.rootPattern = (new URL(this.rootPath)).pathname;
   }
@@ -275,9 +228,9 @@ export class ApplicationShell extends PolymerElement {
   _routePageChanged(page) {
     // Polymer 2.0 will call with `undefined` on initialization.
     // Ignore until we are properly called with a string.
-    if (page === undefined) {
-      return;
-    }
+    //if (page === undefined) {
+    //  return;
+    //}
 
     // If no page was found in the route data, page will be an empty string.
     // Deault to 'view1' in that case.
@@ -305,23 +258,3 @@ export class ApplicationShell extends PolymerElement {
 }
 
 window.customElements.define(ApplicationShell.is, ApplicationShell);
-
-/* FIREBASE 
-
-          // Element class can define custom element reactions
-        connectedCallback() {
-          super.connectedCallback();
-          console.log('my-element created!');
-        }
-
-        ready() {
-          super.ready();
-        }
-<script defer src="../bower_components/firebase/firebase-app.js"></script>
-<script defer src="../bower_components/firebase/firebase-auth.js"></script>
-<script defer src="../bower_components/firebase/firebase-database.js"></script>
-<script defer src="../bower_components/firebase/firebase-messaging.js"></script>
-<script defer src="../bower_components/firebase/firebase-storage.js"></script>
-
-*/
-;

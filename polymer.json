@@ -4,27 +4,19 @@
   "fragments": [
     "src/404.js",
     "src/send-feedback.js",
-    "src/polymer-project.js",
     "src/developer-tools.js",
-    "src/google-developers.js",
-    "src/mozilla-developers.js",
-    "src/website-development.js",
     "src/hyper-link.js"
   ],
 
   "sources": [
     "src/**/*",
     "images/**/*",
-    "bower.json"
+    "node_modules/@webcomponents/webcomponentsjs/*.js"
   ],
 
   "extraDependencies": [
     "manifest.json",
-    "bower_components/webcomponentsjs/*.js",
-    "src/polymers.json",
-    "src/mozilla.json",
     "src/developer.json",
-    "src/website.json",
     "package.json",
     "sitemap.xml"
   ],
